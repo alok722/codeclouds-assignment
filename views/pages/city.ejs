@@ -1,0 +1,52 @@
+<%- include('../partials/head.ejs'); %>
+
+<div class="container py-3">
+    <div id="spinner"></div>
+    <div class="row justify-content-end my-3">
+        <button class="btn btn-warning float-right" type="button" onclick="logout()">Logout</button>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <span class="anchor" id="formLogin"></span>
+                    <!-- form card login -->
+                    <div class="card card-outline-secondary">
+                        <div class="card-header">
+                            <% if (role === 'admin') { %>
+                            <h3 class="mb-0">Set Default City</h3>
+                            <% } else { %>
+                            <h3 class="mb-0">Check City</h3>
+                            <% } %>
+                        </div>
+                        <div class="card-body">
+                            <form autocomplete="off" class="form" id="formLogin" name="formLogin" role="form">
+                                <div class="form-group">
+                                    <label for="uname1">City</label>
+                                    <input class="form-control" id="city" name="city" required="" type="text">
+                                    <% if (role !== 'admin') { %>
+                                    <p>Does this city lie in radius of 100KM? <span id="isInRange"></span> </p>
+                                    <% } else { %>
+                                    <p></p>
+                                    <% } %>
+                                </div>
+                                <% if (role === 'admin') { %>
+                                <button class="btn btn-success btn-lg float-right" type="button"
+                                    onclick="citySubmit()">Add City</button>
+                                <% } else { %>
+                                <button class="btn btn-success btn-lg float-right" type="button"
+                                    onclick="checkCity()">Check City</button>
+                                <% } %>
+                            </form>
+                        </div>
+                        <!--/card-block-->
+                    </div><!-- /form card login -->
+                </div>
+            </div>
+        </div>
+        <!--/col-->
+    </div>
+    <!--/row-->
+</div>
+
+<%- include('../partials/footer.ejs'); %>

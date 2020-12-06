@@ -1,0 +1,35 @@
+{
+  "name": "codeclouds-assignment",
+  "version": "0.0.1",
+  "description": "codeclouds-assignment",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index",
+    "nodemon": "nodemon src/index.js --ignore public --ignore views",
+    "test": "mocha 'src/test/*.js' --recursive --exit --timeout 10000"
+  },
+  "keywords": [
+    "SSR",
+    "EJS"
+  ],
+  "author": "opendevs",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.11.4",
+    "morgan": "^1.10.0",
+    "opencage-api-client": "^0.10.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^8.2.1",
+    "nodemon": "^2.0.6"
+  }
+}
