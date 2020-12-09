@@ -2,7 +2,7 @@
 
 ## feature-list
 
-  - Homepage [URL](http://localhost:3000/api).
+  - Homepage [http://localhost:3000/api](http://localhost:3000/api).
   - Admin can only sign-in using pre-defined username and password. Username: `admin` ; Password: `codeclouds`.
   - User can do both signUp and signIn.
   - If `Admin` logs in he/she will be presented with a UI where he/she can add default city.
@@ -18,4 +18,24 @@
 > auth token: `jwt`;
 > extract latitude & longitude: `opencage-api-client`
 > testing: `mocha & chai`;
+```
+
+## 🛠 usage
+
+```sh
+$ git clone https://github.com/alok722/codeclouds-assignment.git
+
+$ cd codeclouds-assignment
+
+$ npm i
+
+$ npm run nodemon
+
+$ launch any browser & open `http://localhost:3000/api`
+```
+
+## 🧪 unit-test-command
+
+```sh
+$ npm run test
 ```
